@@ -1,0 +1,38 @@
+<script type="text/javascript">
+	RED.nodes.registerType('shorten', {
+		category: 'advanced',
+		color: '#AABBCD',
+		defaults: {
+			name: { value: 'Shorten URL' },
+			longurl: { value: '' },
+			shorturl: { value: '' }
+		},
+		inputs: 1,
+		outputs: 1,
+		icon: 'white-globe.png',
+		label: function () {
+			return this.name || 'shorten';
+	}
+});
+</script>
+
+<script type="text/x-red" data-template-name='shorten'>
+	<div class="form-row">
+		<label for='node-input-name'><i class='icon-tag'></i>Name</label>
+		<input type='text' id='node-input-name' placeholder='Name'>
+	</div>
+	<div class="form-row">
+		<label for='node-input-longurl'><i class='icon-tag'></i> Long URL</label>
+		<input type='text' id='node-input-longurl' placeholder='https://www.google.com'>
+	</div>
+	<div class="form-row">
+		<label for='node-input-shorturl'><i class='icon-tag'></i> Short URL</label>
+		<input type='text' id='node-input-shorturl' placeholder='Custom Short URL - minimum 6 letters'>
+	</div>
+</script>
+
+<script type='text/x-red' data-help-name='shorten'>
+	<h2>Shorten URL.</h2>
+	<br>
+	<p>Shorten long URLs using the http://is.gd service.</p>
+</script>
