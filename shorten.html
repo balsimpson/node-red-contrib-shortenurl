@@ -34,5 +34,31 @@
 <script type='text/x-red' data-help-name='shorten'>
 	<h2>Shorten URL.</h2>
 	<br>
-	<p>Shorten long URLs using the http://is.gd service.</p>
+	<p>Shorten long URLs using the is.gd service.</p>
+
+<h3>Inputs</h3>
+<dl class="message-properties">
+	<dt>longurl
+		<span class="property-type">string</span>
+	</dt>
+	<dd> the long URL to be shortened. e.g: http://www.google.com </dd>
+	<dt>shorturl
+		<span class="property-type">string</span>
+	</dt>
+	<dd> custom short URL. If it already exists, an error is returned.</dd>
+</dl>
+
+<h3>Outputs</h3>
+<ol class="node-ports">
+	<li>Standard output
+		<dl class="message-properties">
+			<dt>payload <span class="property-type">string</span></dt>
+			<dd> is the converted short URL
+			</dd>
+		</dl>
+	</li>
+</ol>
+
+<h3>Details</h3>
+<p>You can set the properties in the incoming message by specifying <code>msg.longurl</code> or <code>msg.payload.longurl</code>. You can set the <code>shorturl</code> similarly. </p>
 </script>
