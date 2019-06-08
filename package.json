@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-shortenurl",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Shorten long URLs using the is.gd service.",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,11 @@
       "shorten": "shorten.js"
     }
   },
+  "keywords": [
+    "node-red",
+    "shorten",
+    "shorten url"
+  ],
   "author": "tinkr",
   "license": "ISC"
 }

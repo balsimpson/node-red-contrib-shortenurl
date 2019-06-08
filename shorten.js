@@ -42,17 +42,17 @@ module.exports = function (RED) {
 			let shorturl = '';
 			// LONG URL
 			if (msg.longurl) {
-				longurl = msg.longurl;
+				longurl = encodeURIComponent(msg.longurl);
 			} else if (msg.payload && msg.payload.longurl) {
-				longurl = msg.payload.longurl;
+				longurl = encodeURIComponent(msg.payload.longurl);
 			} else {
 				longurl = config.longurl;
 			}
 			// SHORT URL
 			if (msg.shorturl) {
-				shorturl = msg.shorturl;
+				shorturl = encodeURIComponent(msg.shorturl);
 			} else if (msg.payload && msg.payload.shorturl) {
-				shorturl = msg.payload.shorturl;
+				shorturl = encodeURIComponent(msg.payload.shorturl);
 			} else {
 				shorturl = config.shorturl;
 			}
